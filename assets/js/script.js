@@ -90,4 +90,10 @@ function hourlySalary(salary) {
     return salary * 8 * 5 * 4 * 12;
 }
 
+/**
+ * Conversion salary from monthly to yearly 
+ */
+function monthlySalary(salary) {
+    return salary * 12;
+}
 
