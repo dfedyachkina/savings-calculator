@@ -85,3 +85,11 @@ label {
     background: #e0dc2a;
     box-shadow: 0px 2px 2px 0px black;
 }
+
+/* Result Section */
+
+#calculated-result {
+    font-size: 25px;
+}
+
+
