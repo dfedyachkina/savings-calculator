@@ -24,29 +24,29 @@
         <h2>Lets's Calculate!</h2>
         <form method="post" id="calculate-form">
             <label for="desired-saving">How much money you are desiring to save?:</label>
-            <input type="number" id="desired-saving" class="calculate-input">
+            <input type="number" id="desired-saving" class="calculate-input" required>
             <br>
             <label for="salary">What's your salary?:</label>
-            <input type="number" id="salary" class="calculate-input">
+            <input type="number" id="salary" class="calculate-input" required>
             <br>
             <label for="type-of-salary">What's your type of salary?:</label>
             <div id="type-of-salary">
-                <input type="radio" class="radio" data-type="hourly">Hourly
-                <input type="radio" class="radio" data-type="monthly">Monthly
-                <input type="radio" class="radio" data-type="yearly">Yearly
+                <input type="radio" name="radio-btn" class="radio" data-type="hourly" required>Hourly
+                <input type="radio" name="radio-btn" class="radio" data-type="monthly">Monthly
+                <input type="radio" name="radio-btn" class="radio" data-type="yearly">Yearly
             </div>
             <br>
             <label for="rent">How much rent/mortgage do you pay every month?:</label>
-            <input type="number" id="rent-mortgage" class="calculate-input">
+            <input type="number" id="rent-mortgage" class="calculate-input" required>
             <br>
             <label for="">How much biils do you usually pay? (Enter approximate number):</label>
-            <input type="number" id="bills" class="calculate-input">
+            <input type="number" id="bills" class="calculate-input" required>
             <br>
             <label for="food">How much do you spend on food monthly? (Enter approximate number):</label>
-            <input type="number" id="food" class="calculate-input">
+            <input type="number" id="food" class="calculate-input" required>
             <br>
             <label for="other-expenses">How much do you spend on other expenses? (Enter approximate number):</label>
-            <input type="number" id="other-expenses" class="calculate-input">
+            <input type="number" id="other-expenses" class="calculate-input" required>
             <br>
             <button data-type="submit" id="submit-button">Calculate!</button>
         </form>
