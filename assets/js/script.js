@@ -8,3 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         checkData();
     });
 });
+
+const resultText = document.getElementById("result");
+
+
