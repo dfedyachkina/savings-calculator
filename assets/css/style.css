@@ -123,3 +123,22 @@ label {
 
 }
 
+/* Media for screens 1120px and upper  */
+
+@media screen and (min-width:1120px) {
+
+    /* Calculator and result section */
+    section {
+        columns: 2
+    }
+
+    /* Form section */
+    #calculator , #calculated-result {
+        margin: 0 10px;
+    }
+    #submit-button:hover {
+        background: #185318;
+        color: white;
+    }
+
+}
