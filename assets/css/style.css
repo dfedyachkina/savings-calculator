@@ -1,0 +1,38 @@
+/* --------- Global style */
+
+body {
+    background-color: white;
+    font-family: "Open Sans", sans-serif;
+    color: #3b3b3b;
+    text-align: center;
+    margin: 5px 5px;
+}
+
+h1 {
+    padding: 10px;
+    font-size: 2rem;
+    border-bottom: 1px solid #3b3b3b78;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+    font-family: "Roboto Mono", monospace;
+    margin: 10px;
+}
+
+img {
+    width: 50px;
+    margin: 0px 5px;
+}
+
+p {
+    margin: 5px 10px;
+    padding: 10px;
+}
+
+form {
+    text-align: left;
+}
+
