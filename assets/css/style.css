@@ -93,3 +93,33 @@ label {
 }
 
 
+
+/* Media for screens 720px and upper */
+@media screen and (min-width: 720px) {
+
+    /* Headings */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2,
+    h3 {
+        font-size: 2rem;
+    }
+
+    /* Calculator */
+    .calculator {
+        display: inline-block;
+    }
+
+    #calculate-form {
+        max-width: 550px;
+    }
+
+    .calculate-input {
+        max-width: 500px;
+        min-height: 30px;
+    }
+
+}
+
