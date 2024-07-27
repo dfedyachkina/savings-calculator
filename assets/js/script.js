@@ -83,4 +83,11 @@ function findCheckedRadioButton() {
 }
 
 
+/**
+ * Conversion salary from hourly to yearly
+ */
+function hourlySalary(salary) {
+    return salary * 8 * 5 * 4 * 12;
+}
+
 
