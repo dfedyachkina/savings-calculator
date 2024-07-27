@@ -67,4 +67,20 @@ function checkData() {
     }
 }
 
+/**
+ * Find the checked radio button
+ * Assign it to typeOfSalary
+ */
+
+
+function findCheckedRadioButton() {
+    let selectedRadioButton = document.querySelector('input[type="radio"]:checked');
+    if (selectedRadioButton) {
+        return selectedRadioButton.getAttribute("data-type");
+    } else {
+        return null;
+    }
+}
+
+
 
