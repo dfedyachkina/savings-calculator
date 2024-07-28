@@ -3,10 +3,11 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     let button = document.getElementsByTagName("button")[0];
-    button.addEventListener("click", function(event) {
+    button.addEventListener("click", function (event) {
         event.preventDefault();
         checkData();
     });
+    
 });
 
 const resultText = document.getElementById("result");
@@ -23,13 +24,20 @@ function letsCalculate(desiredSavings, salary, rentMortgage, bills, food, otherE
         resultText.innerText = `Your hourly salary ${salary} euro has been converted to yearly salary.`
         salary = hourlySalary(salary);
     } else if (typeOfSalary === "monthly") {
+        resultText.innerText = `Your monthly salary ${salary} euro has been converted to yearly salary.`
         salary = monthlySalary(salary);
     } else if (typeOfSalary === null) {
         alert(`You haven't clicked on the radio button! Please choose your type of salary`);
         throw `Radio button hasn't been clicked`;
     }
     document.getElementById("yearly-salary").innerText = `Your yearly salary: ${salary}`;
-
+    const taxInfo = taxCalculator(salary);
+    document.getElementById("tax").innerText = taxInfo.message;
+    const taxMonthly = taxInfo.taxMonthly;
+    document.getElementById("six-month").innerText = `What if you try to save ${desiredSavings} euro within 6 month:` + sixMonthSave(desiredSavings, salary, rentMortgage, bills, food, otherExpenses, taxMonthly);
+    document.getElementById("one-year").innerText = `\nWhat if you try to save ${desiredSavings} euro within 1 year:` + oneYearSave(desiredSavings, salary, rentMortgage, bills, food, otherExpenses, taxMonthly);
+    document.getElementById("two-years").innerText = `\nWhat if you try to save ${desiredSavings} euro within 2 years:` + twoYearsSave(desiredSavings, salary, rentMortgage, bills, food, otherExpenses, taxMonthly);
+    document.getElementById("three-years").innerText = `\nWhat if you try to save ${desiredSavings} euro within 3 years:` + threeYearsSave(desiredSavings, salary, rentMortgage, bills, food, otherExpenses, taxMonthly);
 }
 
 /**
