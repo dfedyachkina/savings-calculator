@@ -158,3 +158,18 @@ function oneYearSave(desiredSavings, salary, rentMortgage, bills, food, otherExp
     }
 }
 
+/**
+ * Calculate how much person should save every month during 2 years
+ */
+
+function twoYearsSave(desiredSavings, salary, rentMortgage, bills, food, otherExpenses, taxMonthly) {
+    let eachMonthSavings = Math.round(desiredSavings / 24);
+    let howMuchMoneyLeftMonthly = Math.round((salary / 12) - taxMonthly - rentMortgage - (bills / 2) - food - otherExpenses);
+    if (eachMonthSavings <= howMuchMoneyLeftMonthly) {
+        let moneyLeft = howMuchMoneyLeftMonthly - eachMonthSavings;
+        return `\nYou can afford to save ${desiredSavings} euro within 2 years.\nYou need to save monthly: ${eachMonthSavings} euro \n Money left: ${moneyLeft} euro`;
+    } else {
+        return `\nUnfortunately, it's impossible to save ${desiredSavings} euro within 2 years.\nThere is how much money needs every month: ${eachMonthSavings} euro\n There is how much money left you have every month after taxes and all your expenses: ${howMuchMoneyLeftMonthly} euro`;
+    }
+}
+
