@@ -105,3 +105,26 @@ function monthlySalary(salary) {
     return salary * 12;
 }
 
+/**
+ * Calculate tax based on yearly salary
+ */
+
+function taxCalculator(salary) {
+    let taxYearly, taxMonthly;
+    if (salary < 40000) {
+        taxYearly = Math.round(salary * 0.2);
+        taxMonthly = Math.round(taxYearly / 12);
+        return {
+            message: `Your rate of taxes is 20%, because your annual salary is less than 40,000 euro.\n The total tax: ${taxYearly}\n Your tax monthly: ${taxMonthly}`,
+            taxMonthly: taxMonthly
+        };
+    } else {
+        taxYearly = Math.round(salary * 0.4);
+        taxMonthly = Math.round(taxYearly / 12);
+        return {
+            message: `Your rate of taxes is 40%, because your annual salary is equal or more than 40,000 euro.\n The total tax: ${taxYearly}\n Your tax monthly: ${taxMonthly}`,
+            taxMonthly: taxMonthly
+        };
+    }
+}
+
