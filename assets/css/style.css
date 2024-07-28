@@ -92,6 +92,10 @@ label {
     font-size: 25px;
 }
 
+.result-sn{
+    display: block;
+}
+
 
 
 /* Media for screens 720px and upper */
@@ -140,5 +144,6 @@ label {
         background: #185318;
         color: white;
     }
+
 
 }
