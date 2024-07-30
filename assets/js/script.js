@@ -68,7 +68,7 @@ function checkData() {
         resultText.innerText = `You entered food expenses: ${food}. The value cannot be lees than 0. Please eneter another value and try again!`;
         resultText.style.color = "red";
     } else if (otherExpenses < 0) {
-        resultText.innerText = `You entered salary: ${otherExpenses}. The value cannot be lees than 0. Please eneter another value and try again!`;
+        resultText.innerText = `You entered other expenses: ${otherExpenses}. The value cannot be lees than 0. Please eneter another value and try again!`;
         resultText.style.color = "red";
     } else {
         letsCalculate(desiredSavings, salary, rentMortgage, bills, food, otherExpenses);
