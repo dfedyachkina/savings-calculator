@@ -67,6 +67,10 @@ section {
 }
 
 /* Calculate Section */
+.calculator {
+    width: 100vw;
+}
+
 #calculate-form {
     display: flex;
     flex-direction: column;
