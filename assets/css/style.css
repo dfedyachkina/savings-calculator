@@ -198,4 +198,18 @@ section {
     }
 
 
+    #calculate-form {
+        width: 50vw;
+    }
+
+    .calculate-input {
+        width: 50vw;
+    }
+
+
+}
+
+
+.hide {
+    display: none;
 }
