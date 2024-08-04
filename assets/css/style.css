@@ -36,6 +36,14 @@ form {
     text-align: left;
 }
 
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+
 /* Calculate Section */
 #calculate-form {
     display: flex;
