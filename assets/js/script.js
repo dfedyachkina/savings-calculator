@@ -1,5 +1,4 @@
-// Wait for the DOM to finish loading before running the game
-// Get the button elements and add event listeners to them
+// Global variables
 let introSection = document.getElementById("intro");
 let calculatorSection = document.getElementById("calculate");
 let calculator = document.getElementById("calculator");
@@ -9,7 +8,8 @@ let resetBtn = document.getElementById("reset");
 let form = document.getElementById("calculate-form");
 const resultText = document.getElementById("result");
 
-
+// Wait for the DOM to finish loading before running the game
+// Get the button elements and add event listeners to them
 document.addEventListener("DOMContentLoaded", function () {
     startBtn.addEventListener("click", function() {
         introSection.classList.add("hide");
