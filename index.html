@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
-
     <!-- CSS file -->
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Savings Calculator</title>
@@ -18,40 +17,15 @@
     <!-- Intruduction -->
     <h1><img src="assets/images/piggy-bank.png" alt="Piggy Bank">Welcome to Your Savings Calculator</h1>
     <!-- Calculator and Result -->
-    <section>
-    <!-- Calculator-->
-    <div class="calculator">
-        <h2>Lets's Calculate!</h2>
-        <form id="calculate-form">
-            <label for="desired-saving">How much money you are desiring to save?:</label>
-            <input type="number" id="desired-saving" class="calculate-input" required>
-            <br>
-            <label for="salary">What's your salary?:</label>
-            <input type="number" id="salary" class="calculate-input" required>
-            <br>
-            <label for="type-of-salary">What's your type of salary?:</label>
-            <div id="type-of-salary">
-                <input type="radio" name="radio-btn" class="radio" data-type="hourly" required>Hourly
-                <input type="radio" name="radio-btn" class="radio" data-type="monthly">Monthly
-                <input type="radio" name="radio-btn" class="radio" data-type="yearly">Yearly
-            </div>
-            <br>
-            <label for="rent">How much rent/mortgage do you pay every month?:</label>
-            <input type="number" id="rent-mortgage" class="calculate-input" required>
-            <br>
-            <label for="">How much bills do you usually pay? (Enter approximate number):</label>
-            <input type="number" id="bills" class="calculate-input" required>
-            <br>
-            <label for="food">How much do you spend on food monthly? (Enter approximate number):</label>
-            <input type="number" id="food" class="calculate-input" required>
-            <br>
-            <label for="other-expenses">How much do you spend on other expenses? (Enter approximate number):</label>
-            <input type="number" id="other-expenses" class="calculate-input" required>
-            <br>
-            <button data-type="submit" id="submit-button">Calculate!</button>
-        </form>
-    </div>
-
+    <section id="intro">
+        Dreaming of a holiday but not sure how to make it happen? <br>Want to find a way to save more money without the
+        stress? <br> Our Saving Calculator is here to help you turn those dreams into reality. Whether you're planning a
+        tropical getaway, a cross-country road trip, or just looking to build a better financial cushion, our
+        easy-to-use tool is designed to show you how small changes can lead to big savings. <br> Start your journey today and
+        see how you can make your financial goals a reality with just a few simple steps. <br>Let’s make those dreams come
+        true!
+        <button id="start">Start</button>
+    </section>
         <!-- Calculated Result -->
         <div id="calculated-result">
             <h2 id="result-heading">Result:</h2>
