@@ -43,6 +43,28 @@ section {
     align-items: start;
 }
 
+/* Introduction section */
+#intro {
+    margin: 30px 10px;
+    align-items: center;
+    padding: 10px 10px;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.8vh; 
+    color: #3b3b3b;
+}
+
+#start {
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin: 30px;
+    color: white;
+    background-color: #3a3a3a;
+    width: 15vh;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: -1px 0px 2px 1px #00000096;
+}
 
 /* Calculate Section */
 #calculate-form {
