@@ -67,8 +67,14 @@ function letsCalculate(desiredSavings, salary, rentMortgage, bills, food, otherE
         resultText.innerText = `Your monthly salary ${salary} euro has been converted to yearly salary.`
         salary = monthlySalary(salary);
     } else if (typeOfSalary === null) {
-        alert(`You haven't clicked on the radio button! Please choose your type of salary`);
-        throw `Radio button hasn't been clicked`;
+        resultText.classList.remove("hide");
+        calculateTaxHeading.classList.add("hide");
+    
+        resultText.innerText = "You haven't checked a radio button - please click on RESET and try again";
+        resultText.style.color = "red";
+        document.getElementById("yearly-salary").classList.add("hide");
+        document.getElementById("tax").classList.add("hide");
+        return;
     }
     document.getElementById("yearly-salary").innerText = `Your yearly salary: ${salary}`;
     const taxInfo = taxCalculator(salary);
@@ -97,26 +103,40 @@ function checkData() {
     let food = parseInt(document.getElementById("food").value);
     let otherExpenses = parseInt(document.getElementById("other-expenses").value);
     if (desiredSavings <= 100) {
+        resultText.classList.remove("hide");
+        calculateTaxHeading.classList.add("hide");
         resultText.innerText = `You entered desired saving: ${desiredSavings}. The value cannot be lees than 1. Please eneter another value and try again!`;
         resultText.style.color = "red";
     } else if (salary <= 100) {
+        resultText.classList.remove("hide");
+        calculateTaxHeading.classList.add("hide");
         resultText.innerText = `You entered salary: ${salary}. The value cannot be lees than 1. Please eneter another value and try again!`;
         resultText.style.color = "red";
     } else if (rentMortgage <= 0) {
+        resultText.classList.remove("hide");
+        calculateTaxHeading.classList.add("hide");
         resultText.innerText = `You entered rent/mortgage expenses: ${rentMortgage}. The value cannot be lees than 0. Please eneter another value and try again!`;
         resultText.style.color = "red";
     } else if (bills <= 0) {
+        resultText.classList.remove("hide");
+        calculateTaxHeading.classList.add("hide");
         resultText.innerText = `You entered bills expenses: ${bills}. The value cannot be lees than 0. Please eneter another value and try again!`;
         resultText.style.color = "red";
     } else if (food <= 0) {
+        resultText.classList.remove("hide");
+        calculateTaxHeading.classList.add("hide");
         resultText.innerText = `You entered food expenses: ${food}. The value cannot be lees than 0. Please eneter another value and try again!`;
         resultText.style.color = "red";
     } else if (otherExpenses <= 0) {
+        resultText.classList.remove("hide");
+        calculateTaxHeading.classList.add("hide");
         resultText.innerText = `You entered other expenses: ${otherExpenses}. The value cannot be lees than 0. Please eneter another value and try again!`;
         resultText.style.color = "red";
     } else {
         calculator.classList.add("hide");
         calculateResult.classList.remove("hide");
+        document.getElementById("yearly-salary").classList.remove("hide");
+        document.getElementById("tax").classList.remove("hide");
         letsCalculate(desiredSavings, salary, rentMortgage, bills, food, otherExpenses);
     }
 }
