@@ -187,9 +187,11 @@ section {
         background-color: #185318;
     } 
     /* Form section */
-    #calculator , #calculated-result {
+    #calculate{
+        flex-direction: row;
         margin: 0 10px;
     }
+
     #submit-button:hover {
         background: #185318;
         color: white;
