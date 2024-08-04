@@ -168,7 +168,7 @@ function sixMonthSave(desiredSavings, salary, rentMortgage, bills, food, otherEx
         let moneyLeft = howMuchMoneyLeftMonthly - eachMonthSavings;
         return `\nYou can afford to save ${desiredSavings} euro within 6 month.\nYou need to save monthly: ${eachMonthSavings} euro \n Money left: ${moneyLeft} euro`;
     } else {
-        return `\nUnfortunately, it's impossible to save ${desiredSavings} euro within 6 month.\nThere is how much money needs every month: ${eachMonthSavings} euro\n There is how much money lefy you have every month: ${howMuchMoneyLeftMonthly} euro`;
+        return `\nUnfortunately, it's impossible to save ${desiredSavings} euro within 6 month.\nThere is how much money needs every month: ${eachMonthSavings} euro\n There is how much money left you have every month: ${howMuchMoneyLeftMonthly} euro`;
     }
 }
 
