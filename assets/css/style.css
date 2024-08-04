@@ -124,7 +124,8 @@ section {
 /* Result Section */
 
 #calculated-result {
-    font-size: 25px;
+    width: 100%;
+    font-size: 1.5rem;
 }
 
 .result-sn{
