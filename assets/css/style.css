@@ -85,7 +85,7 @@ section {
     border-radius: 25px;
 }
 
-label {
+.form-labels {
     margin: 5px 0px 10px;
     font-size: 20px;
     text-transform: capitalize;
