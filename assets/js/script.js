@@ -1,5 +1,14 @@
 // Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
+let introSection = document.getElementById("intro");
+let calculatorSection = document.getElementById("calculate");
+let calculator = document.getElementById("calculator");
+let calculateResult = document.getElementById("calculated-result");
+let startBtn = document.getElementById("start");
+let resetBtn = document.getElementById("reset");
+let form = document.getElementById("calculate-form");
+const resultText = document.getElementById("result");
+
 
 document.addEventListener("DOMContentLoaded", function () {
     let button = document.getElementsByTagName("button")[0];
