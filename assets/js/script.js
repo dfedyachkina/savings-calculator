@@ -20,8 +20,17 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.reload();
     });
 
+
+    form.addEventListener("submit", function(event) {
         event.preventDefault();
-        checkData();
+    
+        if (this.checkValidity()) {
+            // form is valid
+            checkData();
+        } else {
+            // form is not valid
+            this.reportValidity();
+        }
     });
     
 });
