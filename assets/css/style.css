@@ -159,9 +159,10 @@ section {
         font-size: 2rem;
     }
 
-    /* Calculator */
-    .calculator {
-        display: inline-block;
+    /* Inroduction section */
+    #intro {
+        font-size: 2vh;
+        margin: 30px 10%;
     }
 
     #calculate-form {
