@@ -35,9 +35,23 @@ document.addEventListener("DOMContentLoaded", function () {
             this.reportValidity();
         }
     });
+
+    inputs.forEach((input, index) => {
+        input.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault(); // Prevent the default form submission
+
+                let nextInput = inputs[index + 1]; // Get the next input element
+                if (nextInput) {
+                    nextInput.focus(); // Move the focus to the next input element
+                } else {
+                    submitBtn.focus(); // Focus the submit button if it's the last input
+                }
+            }
+        });
+    });
+
 });
-
-
 
 /**
  * Calculate all entered data
