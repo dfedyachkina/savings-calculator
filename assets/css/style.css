@@ -165,10 +165,12 @@ section {
         margin: 30px 10%;
     }
 
+    /* Calculate section */
     #calculate-form {
-        max-width: 550px;
+        width: 50vh;
+        margin: 0px auto;
     }
-
+    
     .calculate-input {
         max-width: 500px;
         min-height: 30px;
