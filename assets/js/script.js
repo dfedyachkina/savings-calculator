@@ -11,8 +11,15 @@ const resultText = document.getElementById("result");
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    let button = document.getElementsByTagName("button")[0];
-    button.addEventListener("click", function (event) {
+    startBtn.addEventListener("click", function() {
+        introSection.classList.add("hide");
+        calculatorSection.classList.remove("hide");
+    });
+
+    resetBtn.addEventListener("click", function() {
+        window.location.reload();
+    });
+
         event.preventDefault();
         checkData();
     });
