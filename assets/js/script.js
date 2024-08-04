@@ -77,9 +77,9 @@ function letsCalculate(desiredSavings, salary, rentMortgage, bills, food, otherE
         return;
     }
     document.getElementById("yearly-salary").innerText = `Your yearly salary: ${salary}`;
-    const taxInfo = taxCalculator(salary);
+    let taxInfo = taxCalculator(salary);
     document.getElementById("tax").innerText = taxInfo.message;
-    const taxMonthly = taxInfo.taxMonthly;
+    let taxMonthly = taxInfo.taxMonthly;
     document.getElementById("six-month-heading").innerText = `What if you try to save ${desiredSavings} euro within 6 month:`;
     document.getElementById("six-month").innerText = sixMonthSave(desiredSavings, salary, rentMortgage, bills, food, otherExpenses, taxMonthly);
     document.getElementById("one-year-heading").innerText = `What if you try to save ${desiredSavings} euro within 1 year:`;
