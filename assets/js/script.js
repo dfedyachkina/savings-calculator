@@ -4,8 +4,11 @@ let calculatorSection = document.getElementById("calculate");
 let calculator = document.getElementById("calculator");
 let calculateResult = document.getElementById("calculated-result");
 let startBtn = document.getElementById("start");
+let submitBtn = document.getElementById("submit-button");
 let resetBtn = document.getElementById("reset");
 let form = document.getElementById("calculate-form");
+let inputs = form.querySelectorAll("input, radio");
+let calculateTaxHeading = document.getElementById("calculate-tax-heading");
 const resultText = document.getElementById("result");
 
 // Wait for the DOM to finish loading before running the game
