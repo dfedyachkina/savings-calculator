@@ -1,3 +1,7 @@
+// add the line for validation
+
+
+
 // Global variables
 let introSection = document.getElementById("intro");
 let calculatorSection = document.getElementById("calculate");
@@ -102,27 +106,27 @@ function checkData() {
     let bills = parseInt(document.getElementById("bills").value);
     let food = parseInt(document.getElementById("food").value);
     let otherExpenses = parseInt(document.getElementById("other-expenses").value);
-    if (desiredSavings <= 100) {
+    if (desiredSavings < 100) {
         resultText.classList.remove("hide");
         calculateTaxHeading.classList.add("hide");
-        resultText.innerText = `You entered desired saving: ${desiredSavings}. The value cannot be lees than 1. Please eneter another value and try again!`;
+        resultText.innerText = `You entered desired saving: ${desiredSavings}. The value cannot be lees than 100. Please eneter another value and try again!`;
         resultText.style.color = "red";
-    } else if (salary <= 100) {
+    } else if (salary < 100) {
         resultText.classList.remove("hide");
         calculateTaxHeading.classList.add("hide");
-        resultText.innerText = `You entered salary: ${salary}. The value cannot be lees than 1. Please eneter another value and try again!`;
+        resultText.innerText = `You entered salary: ${salary}. The value cannot be lees than 100. Please eneter another value and try again!`;
         resultText.style.color = "red";
-    } else if (rentMortgage <= 0) {
+    } else if (rentMortgage < 0) {
         resultText.classList.remove("hide");
         calculateTaxHeading.classList.add("hide");
         resultText.innerText = `You entered rent/mortgage expenses: ${rentMortgage}. The value cannot be lees than 0. Please eneter another value and try again!`;
         resultText.style.color = "red";
-    } else if (bills <= 0) {
+    } else if (bills < 0) {
         resultText.classList.remove("hide");
         calculateTaxHeading.classList.add("hide");
         resultText.innerText = `You entered bills expenses: ${bills}. The value cannot be lees than 0. Please eneter another value and try again!`;
         resultText.style.color = "red";
-    } else if (food <= 0) {
+    } else if (food < 0) {
         resultText.classList.remove("hide");
         calculateTaxHeading.classList.add("hide");
         resultText.innerText = `You entered food expenses: ${food}. The value cannot be lees than 0. Please eneter another value and try again!`;
