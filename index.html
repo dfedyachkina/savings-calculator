@@ -30,6 +30,8 @@
 
         <button id="start">Start</button>
     </section>
+
+    <!-- Calculator and Result -->
     <section id="calculate" class="hide">
         <!-- Calculator-->
         <div id="calculator" class="calculator">
@@ -39,11 +41,12 @@
                 <input type="number" id="desired-saving" class="calculate-input" min="100" required>
                 <br>
                 <label for="salary" class="form-labels">How much is your salary?:</label>
-                <input type="number" id="salary" class="calculate-input" min="100" required>
+                <input type="number" id="salary" class="calculate-input" min="10" required>
                 <br>
                 <p class="form-labels">What is your type of salary?:</p>
                 <div id="type-of-salary">
-                    <input type="radio" name="radio-btn" class="radio form-labels" data-type="hourly" id="hourly" required>
+                    <input type="radio" name="radio-btn" class="radio form-labels" data-type="hourly" id="hourly"
+                        required>
                     <label for="hourly">Hourly</label>
                     <input type="radio" name="radio-btn" class="radio form-labels" data-type="monthly" id="monthly">
                     <label for="monthly">Monthly</label>
