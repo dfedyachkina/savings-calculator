@@ -187,6 +187,23 @@ section {
 }
 
 
+/* Media for screens 600px and lower */
+@media only screen and (max-width: 600px) {
+    /* Result section */
+
+    /* Result boxes */
+
+    #boxes {
+        flex-direction: column;
+    }
+
+    .columns {
+      width: 100%;
+    }
+
+}
+
+
 /* Media for screens 720px and upper */
 @media screen and (min-width: 720px) {
 
