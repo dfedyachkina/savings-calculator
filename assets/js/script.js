@@ -107,10 +107,10 @@ function checkData() {
         calculateTaxHeading.classList.add("hide");
         resultText.innerText = `You entered desired saving: ${desiredSavings}. The value cannot be lees than 100. Please eneter another value and try again!`;
         resultText.style.color = "red";
-    } else if (salary < 100) {
+    } else if (salary < 10) {
         resultText.classList.remove("hide");
         calculateTaxHeading.classList.add("hide");
-        resultText.innerText = `You entered salary: ${salary}. The value cannot be lees than 100. Please eneter another value and try again!`;
+        resultText.innerText = `You entered salary: ${salary}. The value cannot be lees than 10. Please eneter another value and try again!`;
         resultText.style.color = "red";
     } else if (rentMortgage < 0) {
         resultText.classList.remove("hide");
