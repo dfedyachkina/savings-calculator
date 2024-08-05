@@ -123,6 +123,51 @@ section {
 
 /* Result Section */
 
+* {
+    box-sizing: border-box;
+  }
+
+  #boxes {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .columns {
+    width: 33.3%;
+    padding: 8px;
+    max-height: 400px;
+  }
+  
+  .box-result {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  
+  .box-result:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+  }
+  
+  .box-result .header {
+    background-color: #111;
+    color: white;
+    font-size: 25px;
+  }
+  
+  .box-result li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .box-result .grey {
+    background-color: #eee;
+    font-size: 20px;
+  }
+
 #calculated-result {
     width: 100%;
     font-size: 1.5rem;
