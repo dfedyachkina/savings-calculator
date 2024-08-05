@@ -82,13 +82,9 @@ function letsCalculate(desiredSavings, salary, rentMortgage, bills, food, otherE
     let taxInfo = taxCalculator(salary);
     document.getElementById("tax").innerText = taxInfo.message;
     let taxMonthly = taxInfo.taxMonthly;
-    document.getElementById("six-month-heading").innerText = `What if you try to save ${desiredSavings} euro within 6 month:`;
     document.getElementById("six-month").innerText = sixMonthSave(desiredSavings, salary, rentMortgage, bills, food, otherExpenses, taxMonthly);
-    document.getElementById("one-year-heading").innerText = `What if you try to save ${desiredSavings} euro within 1 year:`;
     document.getElementById("one-year").innerText = oneYearSave(desiredSavings, salary, rentMortgage, bills, food, otherExpenses, taxMonthly);
-    document.getElementById("two-years-heading").innerText = `\nWhat if you try to save ${desiredSavings} euro within 2 years:`; 
     document.getElementById("two-years").innerText = twoYearsSave(desiredSavings, salary, rentMortgage, bills, food, otherExpenses, taxMonthly);
-    document.getElementById("three-years-heading").innerText = `What if you try to save ${desiredSavings} euro within 3 years:`;
     document.getElementById("three-years").innerText = threeYearsSave(desiredSavings, salary, rentMortgage, bills, food, otherExpenses, taxMonthly);
 }
 
