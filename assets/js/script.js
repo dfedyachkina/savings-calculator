@@ -1,7 +1,4 @@
-// add the line for validation
-
-
-
+/* jshint esversion: 11 */
 // Global variables
 let introSection = document.getElementById("intro");
 let calculatorSection = document.getElementById("calculate");
