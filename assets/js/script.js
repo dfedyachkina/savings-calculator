@@ -133,10 +133,13 @@ function checkData() {
         resultText.innerText = `You entered other expenses: ${otherExpenses}. The value cannot be lees than 0. Please eneter another value and try again!`;
         resultText.style.color = "red";
     } else {
-        calculator.classList.add("hide");
-        calculateResult.classList.remove("hide");
         document.getElementById("yearly-salary").classList.remove("hide");
         document.getElementById("tax").classList.remove("hide");
+        boxResult.classList.remove("hide");
+        let columns = document.getElementsByClassName("columns");
+        for (let column of columns) {
+            column.classList.remove("hide");
+        }
         letsCalculate(desiredSavings, salary, rentMortgage, bills, food, otherExpenses);
     }
 }
