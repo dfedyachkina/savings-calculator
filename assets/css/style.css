@@ -173,10 +173,6 @@ section {
     font-size: 1.5rem;
 }
 
-.result-sn{
-    display: block;
-}
-
 #reset {
     font-family: "Inter", sans-serif;
     text-transform: uppercase;
