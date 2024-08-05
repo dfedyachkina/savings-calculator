@@ -206,8 +206,10 @@ function sixMonthSave(desiredSavings, salary, rentMortgage, bills, food, otherEx
     let howMuchMoneyLeftMonthly = Math.round((salary / 12) - taxMonthly - rentMortgage - (bills / 2) - food - otherExpenses);
     if (eachMonthSavings <= howMuchMoneyLeftMonthly) {
         let moneyLeft = howMuchMoneyLeftMonthly - eachMonthSavings;
+        document.getElementById("six-month-header").style.backgroundColor = "green";
         return `\nYou can afford to save ${desiredSavings} euro within 6 month.\nYou need to save monthly: ${eachMonthSavings} euro \n Money left: ${moneyLeft} euro`;
     } else {
+        document.getElementById("six-month-header").style.backgroundColor = "red";
         return `\nUnfortunately, it's impossible to save ${desiredSavings} euro within 6 month.\nThere is how much money needs every month: ${eachMonthSavings} euro\n There is how much money left you have every month: ${howMuchMoneyLeftMonthly} euro`;
     }
 }
@@ -221,8 +223,10 @@ function oneYearSave(desiredSavings, salary, rentMortgage, bills, food, otherExp
     let howMuchMoneyLeftMonthly = Math.round((salary / 12) - taxMonthly - rentMortgage - (bills / 2) - food - otherExpenses);
     if (eachMonthSavings <= howMuchMoneyLeftMonthly) {
         let moneyLeft = howMuchMoneyLeftMonthly - eachMonthSavings;
+        document.getElementById("one-year-header").style.backgroundColor = "green";
         return `\nYou can afford to save ${desiredSavings} euro within 1 year.\nYou need to save monthly: ${eachMonthSavings} euro \n Money left: ${moneyLeft} euro`;
     } else {
+        document.getElementById("one-year-header").style.backgroundColor = "red";
         return `\nUnfortunately, it's impossible to save ${desiredSavings} euro within 1 year.\nThere is how much money needs every month: ${eachMonthSavings} euro\n There is how much money left you have every month after taxes and all your expenses: ${howMuchMoneyLeftMonthly} euro`;
     }
 }
@@ -236,8 +240,10 @@ function twoYearsSave(desiredSavings, salary, rentMortgage, bills, food, otherEx
     let howMuchMoneyLeftMonthly = Math.round((salary / 12) - taxMonthly - rentMortgage - (bills / 2) - food - otherExpenses);
     if (eachMonthSavings <= howMuchMoneyLeftMonthly) {
         let moneyLeft = howMuchMoneyLeftMonthly - eachMonthSavings;
+        document.getElementById("two-years-header").style.backgroundColor = "green";
         return `\nYou can afford to save ${desiredSavings} euro within 2 years.\nYou need to save monthly: ${eachMonthSavings} euro \n Money left: ${moneyLeft} euro`;
     } else {
+        document.getElementById("two-years-header").style.backgroundColor = "red";
         return `\nUnfortunately, it's impossible to save ${desiredSavings} euro within 2 years.\nThere is how much money needs every month: ${eachMonthSavings} euro\n There is how much money left you have every month after taxes and all your expenses: ${howMuchMoneyLeftMonthly} euro`;
     }
 }
@@ -251,8 +257,10 @@ function threeYearsSave(desiredSavings, salary, rentMortgage, bills, food, other
     let howMuchMoneyLeftMonthly = Math.round((salary / 12) - taxMonthly - rentMortgage - (bills / 2) - food - otherExpenses);
     if (eachMonthSavings <= howMuchMoneyLeftMonthly) {
         let moneyLeft = howMuchMoneyLeftMonthly - eachMonthSavings;
+        document.getElementById("three-years-header").style.backgroundColor = "green";
         return `\nYou can afford to save ${desiredSavings} euro within 3 years.\nYou need to save monthly: ${eachMonthSavings} euro \n Money left: ${moneyLeft} euro`;
     } else {
+        document.getElementById("three-years-header").style.backgroundColor = "red";
         return `\nUnfortunately, it's impossible to save ${desiredSavings} euro within 3 years.\nThere is how much money needs every month: ${eachMonthSavings} euro\n There is how much money left you have every month after taxes and all your expenses ${howMuchMoneyLeftMonthly} euro`;
     }
 }
