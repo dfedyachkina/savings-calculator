@@ -10,6 +10,7 @@ let resetBtn = document.getElementById("reset");
 let form = document.getElementById("calculate-form");
 let inputs = form.querySelectorAll("input, radio");
 let calculateTaxHeading = document.getElementById("calculate-tax-heading");
+let boxResult = document.getElementById("boxes");
 const resultText = document.getElementById("result");
 
 // Wait for the DOM to finish loading before running the game
