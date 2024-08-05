@@ -100,6 +100,8 @@ function checkData() {
     let bills = parseInt(document.getElementById("bills").value);
     let food = parseInt(document.getElementById("food").value);
     let otherExpenses = parseInt(document.getElementById("other-expenses").value);
+    calculator.classList.add("hide");
+    calculateResult.classList.remove("hide");
     if (desiredSavings < 100) {
         resultText.classList.remove("hide");
         calculateTaxHeading.classList.add("hide");
