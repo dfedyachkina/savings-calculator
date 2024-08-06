@@ -60,3 +60,123 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | --- | --- | --- | --- |
 | Home | ![screenshot](documentation/lighthouse/lighthouse-home-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-home-desktop.png) | Some minor warnings |
 
+## Defensive Programming
+
+🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
+
+Defensive programming (defensive design) is extremely important!
+
+When building projects that accept user inputs or forms, you should always test the level of security for each.
+Examples of this could include (not limited to):
+
+Forms:
+- Users cannot submit an empty form
+- Users must enter valid email addresses
+
+PP3 (Python-only):
+- Users must enter a valid letter/word/string when prompted
+- Users must choose from a specific list only
+
+MS3 (Flask) | MS4/PP4/PP5 (Django):
+- Users cannot brute-force a URL to navigate to a restricted page
+- Users cannot perform CRUD functionality while logged-out
+- User-A should not be able to manipulate data belonging to User-B, or vice versa
+- Non-Authenticated users should not be able to access pages that require authentication
+- Standard users should not be able to access pages intended for superusers
+
+You'll want to test all functionality on your application, whether it's a standard form,
+or uses CRUD functionality for data manipulation on a database.
+Make sure to include the `required` attribute on any form-fields that should be mandatory.
+Try to access various pages on your site as different user types (User-A, User-B, guest user, admin, superuser).
+
+You should include any manual tests performed, and the expected results/outcome.
+
+Testing should be replicable.
+Ideally, tests cases should focus on each individual section of every page on the website.
+Each test case should be specific, objective, and step-wise replicable.
+
+Instead of adding a general overview saying that everything works fine,
+consider documenting tests on each element of the page
+(ie. button clicks, input box validation, navigation links, etc.) by testing them in their happy flow,
+and also the bad/exception flow, mentioning the expected and observed results,
+and drawing a parallel between them where applicable.
+
+Consider using the following format for manual test cases:
+
+Expected Outcome / Test Performed / Result Received / Fixes Implemented
+
+- **Expected**: "Feature is expected to do X when the user does Y."
+- **Testing**: "Tested the feature by doing Y."
+- (either) **Result**: "The feature behaved as expected, and it did Y."
+- (or) **Result**: "The feature did not respond to A, B, or C."
+- **Fix**: "I did Z to the code because something was missing."
+
+Use the table below as a basic start, and expand on it using the logic above.
+
+🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
+
+Defensive programming was manually tested with the below user acceptance testing:
+
+| Page | Expectation | Test | Result | Fix | Screenshot |
+| --- | --- | --- | --- | --- | --- |
+| Introduction| | | | | |
+| | Feature is expected to do give introduction of the calculator and allows him to start to calculate when the user does beginning to use this calculator | Tested the feature by doing clicking on "Start" button | The feature behaved as expected, and it did it starts the calculator | Test concluded and passed | ![screenshot](documentation/features/feature01.png) |
+| Calculator | | | | | |
+| | Feature is expected to do check if inputted data when the user does inputting data | Tested the feature by doing input data and click on "Calculate!" button | The feature behaved as expected, and it did not allow the user procceed with empty or incorrect inputs | Test concluded and passed | ![screenshot](documentation/features/feature02.png) |
+| | Feature is expected to do give a calculator form and give the result when the user does inputting data | Tested the feature by doing input data and click on "Calculate!" button | The feature behaved as expected, and it did calculation and give the result | Test concluded and passed | ![screenshot](documentation/features/feature02.png) |
+| Result | | | | | |
+| | Feature is expected to do show the result and allow to the user reload a page when the user does click on "Reset" button  | Tested the feature by doing checking the result and clicking on "Reset" button | The feature behaved as expected, and it did shows correct result and reload page by clicking on "Reset" button | Test concluded and passed | ![screenshot](documentation/features/feature03.png) |
+
+
+
+🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
+
+Another way of performing defensive testing is a simple Pass/Fail for each test.
+The assessors prefer the above method, with the full test explained, but this is also acceptable in most cases.
+
+When in doubt, use the above method instead, and delete the table below.
+
+🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
+
+| Page | User Action | Expected Result | Pass/Fail | Comments |
+| --- | --- | --- | --- | --- |
+| Home | | | | |
+| | Click on Logo | Redirection to Home page | Pass | |
+| | Click on Home link in navbar | Redirection to Home page | Pass | |
+| Gallery | | | | |
+| | Click on Gallery link in navbar | Redirection to Gallery page | Pass | |
+| | Load gallery images | All images load as expected | Pass | |
+| Contact | | | | |
+| | Click on Contact link in navbar | Redirection to Contact page | Pass | |
+| | Enter first/last name | Field will accept freeform text | Pass | |
+| | Enter valid email address | Field will only accept email address format | Pass | |
+| | Enter message in textarea | Field will accept freeform text | Pass | |
+| | Click the Submit button | Redirects user to form-dump | Pass | User must click 'Back' button to return |
+| Sign Up | | | | |
+| | Click on Sign Up button | Redirection to Sign Up page | Pass | |
+| | Enter valid email address | Field will only accept email address format | Pass | |
+| | Enter valid password (twice) | Field will only accept password format | Pass | |
+| | Click on Sign Up button | Asks user to confirm email page | Pass | Email sent to user |
+| | Confirm email | Redirects user to blank Sign In page | Pass | |
+| Log In | | | | |
+| | Click on the Login link | Redirection to Login page | Pass | |
+| | Enter valid email address | Field will only accept email address format | Pass | |
+| | Enter valid password | Field will only accept password format | Pass | |
+| | Click Login button | Redirects user to home page | Pass | |
+| Log Out | | | | |
+| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
+| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| Profile | | | | |
+| | Click on Profile button | User will be redirected to the Profile page | Pass | |
+| | Click on the Edit button | User will be redirected to the edit profile page | Pass | |
+| | Click on the My Orders link | User will be redirected to the My Orders page | Pass | |
+| | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile |
+| repeat for all remaining pages | x | x | x | x |
+
+🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
+
+Repeat for all other tests, as applicable to your own site.
+The aforementioned tests are just an example of a few different project scenarios.
+
+🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
+
