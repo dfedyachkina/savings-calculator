@@ -127,3 +127,20 @@ You can fork this repository by using the following steps:
 ### Local VS Deployment
 
 ## Credits
+
+### Content
+
+| Source | Location | Notes |
+| --- | --- | --- |
+| [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
+| [W3Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_pricing_table) | Result cards | build up cards |
+
+### Media
+
+| Source | Location | Type | Notes |
+| --- | --- | --- | --- |
+| [Flat Icon](https://www.flaticon.com/) | header | image | favicon on all pages |
+
+### Acknowledgements
+
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for his support throughout the development of this project.
