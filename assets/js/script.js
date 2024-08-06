@@ -63,10 +63,10 @@ document.addEventListener("DOMContentLoaded", function () {
 function letsCalculate(desiredSavings, salary, rentMortgage, bills, food, otherExpenses) {
     let typeOfSalary = findCheckedRadioButton();
     if (typeOfSalary === "hourly") {
-        resultText.innerText = `Your hourly salary ${salary} euro has been converted to yearly salary.`
+        resultText.innerText = `Your hourly salary ${salary} euro has been converted to yearly salary.`;
         salary = hourlySalary(salary);
     } else if (typeOfSalary === "monthly") {
-        resultText.innerText = `Your monthly salary ${salary} euro has been converted to yearly salary.`
+        resultText.innerText = `Your monthly salary ${salary} euro has been converted to yearly salary.`;
         salary = monthlySalary(salary);
     } else if (typeOfSalary === null) {
         resultText.classList.remove("hide");
