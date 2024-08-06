@@ -52,3 +52,11 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Desktop | ![screenshot](documentation/responsiveness/responsive-desktop-intro.png) | ![screenshot](documentation/responsiveness/responsive-desktop-calculator.png) | ![screenshot](documentation/responsiveness/responsive-desktop-result.png) | Works as expected |
 
 
+## Lighthouse Audit
+
+I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
+
+| Page | Mobile | Desktop | Notes |
+| --- | --- | --- | --- |
+| Home | ![screenshot](documentation/lighthouse/lighthouse-home-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-home-desktop.png) | Some minor warnings |
+
