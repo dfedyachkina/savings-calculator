@@ -31,3 +31,13 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 | --- | --- | --- | --- |
 | assets | script.js | ![screenshot](documentation/validation/js-validation.png) | |
 
+## Browser Compatibility
+
+I've tested my deployed project on multiple browsers to check for compatibility issues.
+
+| Browser | Introduction| Calculator | Result | Notes |
+| --- | --- | --- | --- | --- |
+| Chrome | ![screenshot](documentation/browsers/browser-chrome-intro.png) | ![screenshot](documentation/browsers/browser-chrome-calculator.png) | ![screenshot](documentation/browsers/browser-chrome-result.png) | Works as expected |
+| Firefox | ![screenshot](documentation/browsers/browser-firefox-intro.png) | ![screenshot](documentation/browsers/browser-firefox-calculator.png) | ![screenshot](documentation/browsers/browser-firefox-result.png) | Works as expected |
+| Edge | ![screenshot](documentation/browsers/browser-edge-intro.png) | ![screenshot](documentation/browsers/browser-edge-calculator.png) | ![screenshot](documentation/browsers/browser-edge-result.png) | Works as expected |
+
