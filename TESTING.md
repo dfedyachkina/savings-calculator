@@ -180,3 +180,130 @@ The aforementioned tests are just an example of a few different project scenario
 
 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
+## Bugs
+
+🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
+
+This section is primarily used for JavaScript and Python applications,
+but feel free to use this section to document any HTML/CSS bugs you might run into.
+
+It's very important to document any bugs you've discovered while developing the project.
+Make sure to include any necessary steps you've implemented to fix the bug(s) as well.
+
+**PRO TIP**: screenshots of bugs are extremely helpful, and go a long way!
+
+🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
+
+-  typeOfSalary didn’t get an attribute of checked radiobutton
+
+    ![screenshot](documentation/bugs/bug01.png)
+
+    - To fix this, I change the attribute by which querySelector looking for checked button.
+
+    - Before: 
+    function findCheckedRadioButton() {
+    let selectedRadioButton = document.querySelector('input[name="radio"]:checked');
+    if (selectedRadioButton) {
+        return selectedRadioButton.getAttribute("data-type");
+    } else {
+        return null;
+    }
+}
+    - After:
+    function findCheckedRadioButton() {
+    let selectedRadioButton = document.querySelector('input[type="radio"]:checked');
+    if (selectedRadioButton) {
+        return selectedRadioButton.getAttribute("data-type");
+    } else {
+        return null;
+    }
+    }
+
+
+- Functions letsCalculate, hourlySlary, monthlySalary don’t get value of vars
+
+    ![screenshot](documentation/bugs/bug02.png)
+
+    - To fix this, I add keys such as salary, desiredSavings, rentMortgage, bills, food, otherExpenses into the functions.
+
+    function letsCalculate(desiredSavings, salary, rentMortgage, bills, food, otherExpenses) {
+    let typeOfSalary = findCheckedRadioButton();
+    if (typeOfSalary === "hourly") {
+        console.log(salary);
+        salary = hourlySalary(salary);
+    } else if (typeOfSalary === "monthly") {
+        salary = monthlySalary(salary);
+    } else if (typeOfSalary === null) {
+        alert(`You haven't clicked on the radio button! Please choose your type of salary`);
+        throw `Radio button hasn't been clicked`;
+    }
+}
+
+
+- Function sixMonth, oneYear, twoYears and threeYears don't get a value of the variable taxMonthly
+
+    ![screenshot](documentation/bugs/bug03.png)
+
+    - To fix this, I add return message and variable of taxMontly separetly in taxCalculator function.
+
+- JS cannot find the element with ID result.
+
+    ![screenshot](documentation/bugs/bug04.png)
+
+    - To fix this, I added an element with ID result in HTML file.
+
+- JS doesn't give process with minimum variables.
+
+    ![screenshot](documentation/bugs/bug05.png)
+
+    - To fix this, I change a logical signs instead of "<=" to "<".
+
+- Reset button overflows the cards
+
+    ![screenshot](documentation/bugs/bug06.png)
+
+    - To fix this, I fix styles to the cards and to the button.
+
+## Unfixed Bugs
+
+🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
+
+You will need to mention unfixed bugs and why they were not fixed.
+This section should include shortcomings of the frameworks or technologies used.
+Although time can be a big variable to consider, paucity of time and difficulty understanding
+implementation is not a valid reason to leave bugs unfixed.
+
+If you've identified any unfixed bugs, no matter how small, be sure to list them here.
+It's better to be honest and list them, because if it's not documented and an assessor finds the issue,
+they need to know whether or not you're aware of them as well, and why you've not corrected/fixed them.
+
+Some examples:
+
+🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
+
+- On devices smaller than 375px, the page starts to have `overflow-x` scrolling.
+
+    ![screenshot](documentation/bugs/unfixed-bug01.png)
+
+    - Attempted fix: I tried to add additional media queries to handle this, but things started becoming too small to read.
+
+- For PP3, when using a helper `clear()` function, any text above the height of the terminal does not clear, and remains when you scroll up.
+
+    ![screenshot](documentation/bugs/unfixed-bug02.png)
+
+    - Attempted fix: I tried to adjust the terminal size, but it only resizes the actual terminal, not the allowable area for text.
+
+- When validating HTML with a semantic `section` element, the validator warns about lacking a header `h2-h6`. This is acceptable.
+
+    ![screenshot](documentation/bugs/unfixed-bug03.png)
+
+    - Attempted fix: this is a known warning and acceptable, and my section doesn't require a header since it's dynamically added via JS.
+
+🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
+
+If you legitimately cannot find any unfixed bugs or warnings, then use the following sentence:
+
+🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
+
+> [!NOTE]  
+> There are no remaining bugs that I am aware of.
