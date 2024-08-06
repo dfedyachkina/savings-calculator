@@ -41,3 +41,14 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Firefox | ![screenshot](documentation/browsers/browser-firefox-intro.png) | ![screenshot](documentation/browsers/browser-firefox-calculator.png) | ![screenshot](documentation/browsers/browser-firefox-result.png) | Works as expected |
 | Edge | ![screenshot](documentation/browsers/browser-edge-intro.png) | ![screenshot](documentation/browsers/browser-edge-calculator.png) | ![screenshot](documentation/browsers/browser-edge-result.png) | Works as expected |
 
+## Responsiveness
+
+I've tested my deployed project on multiple devices to check for responsiveness issues.
+
+| Device | Introduction| Calculator | Result | Notes |
+| --- | --- | --- | --- | --- |
+| Mobile (DevTools) | ![screenshot](documentation/responsiveness/responsive-mobile-intro.png) | ![screenshot](documentation/responsiveness/responsive-mobile-calculator.png) | ![screenshot](documentation/responsiveness/responsive-mobile-result.png) | Works as expected |
+| Tablet (DevTools) | ![screenshot](documentation/responsiveness/responsive-tablet-intro.png) | ![screenshot](documentation/responsiveness/responsive-tablet-calculator.png) | ![screenshot](documentation/responsiveness/responsive-tablet-result.png) | Works as expected |
+| Desktop | ![screenshot](documentation/responsiveness/responsive-desktop-intro.png) | ![screenshot](documentation/responsiveness/responsive-desktop-calculator.png) | ![screenshot](documentation/responsiveness/responsive-desktop-result.png) | Works as expected |
+
+
