@@ -1,11 +1,18 @@
 /* --------- Global style */
 
-body {
+* {
+    box-sizing: border-box;
+}
+
+body, html {
     background-color: white;
     font-family: "Open Sans", sans-serif;
     color: #3b3b3b;
     text-align: center;
-    margin: 5px 5px;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -44,12 +51,15 @@ section {
 }
 
 /* Introduction section */
+.content {
+    flex: 1;
+} 
 #intro {
     margin: 30px 10px;
     align-items: center;
     padding: 10px 10px;
     font-family: "Oswald", sans-serif;
-    font-size: 1.8vh; 
+    font-size: 1.8vh;
     color: #3b3b3b;
 }
 
@@ -123,10 +133,6 @@ section {
 
 /* Result Section */
 
-* {
-    box-sizing: border-box;
-  }
-
 #boxes {
     display: flex;
     flex-direction: row;
@@ -148,26 +154,26 @@ section {
     transition: 0.3s;
     display: flex;
     flex-direction: column;
-    flex: 1; 
+    flex: 1;
 }
-  
-  .box-result:hover {
-    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
-  }
-  
-  .box-result .header {
+
+.box-result:hover {
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.box-result .header {
     background-color: #111;
     color: white;
     font-size: 25px;
-  }
-  
-  .box-result li {
+}
+
+.box-result li {
     border-bottom: 1px solid #eee;
     padding: 20px;
     text-align: center;
     font-size: 20px;
-  }
-  
+}
+
 
 #calculated-result {
     width: 100%;
@@ -189,17 +195,30 @@ section {
     text-align: center;
 }
 
+/* Footer */
+footer {
+    background-color: #3b3b3b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    unicode-bidi: isolate;
+    margin-top: 20px;
+}
 
-/* Media for screens 600px and lower */
-@media only screen and (max-width: 680px) {
-    /* Result section */
+footer p {
+    margin: 0;
+}
 
-    /* Result boxes */
+i {
+    color: white;
+    margin-right: 10px;
+}
 
-    #boxes {
-        flex-direction: column;
-    }
-
+/* Media for screens 500px and upper */
+@media screen and (min-width: 500px) {
     .columns {
       width: 100%;
     }
