@@ -46,11 +46,11 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 I've tested my deployed project on multiple devices to check for responsiveness issues.
 
-| Device | Introduction| Calculator | Result | Notes |
-| --- | --- | --- | --- | --- |
-| Mobile (DevTools) | ![screenshot](documentation/responsiveness/responsive-mobile-intro.png) | ![screenshot](documentation/responsiveness/responsive-mobile-calculator.png) | ![screenshot](documentation/responsiveness/responsive-mobile-result.png) | Works as expected |
-| Tablet (DevTools) | ![screenshot](documentation/responsiveness/responsive-tablet-intro.png) | ![screenshot](documentation/responsiveness/responsive-tablet-calculator.png) | ![screenshot](documentation/responsiveness/responsive-tablet-result.png) | Works as expected |
-| Desktop | ![screenshot](documentation/responsiveness/responsive-desktop-intro.png) | ![screenshot](documentation/responsiveness/responsive-desktop-calculator.png) | ![screenshot](documentation/responsiveness/responsive-desktop-result.png) | Works as expected |
+| Device | Introduction| Calculator | Result | 404 | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Mobile (DevTools) | ![screenshot](documentation/responsiveness/responsive-mobile-intro.png) | ![screenshot](documentation/responsiveness/responsive-mobile-calculator.png) | ![screenshot](documentation/responsiveness/responsive-mobile-result.png) |![screenshot](documentation/responsiveness/responsive-mobile-404.png)| Works as expected |
+| Tablet (DevTools) | ![screenshot](documentation/responsiveness/responsive-tablet-intro.png) | ![screenshot](documentation/responsiveness/responsive-tablet-calculator.png) | ![screenshot](documentation/responsiveness/responsive-tablet-result.png) |![screenshot](documentation/responsiveness/responsive-tablet-404.png)| Works as expected |
+| Desktop | ![screenshot](documentation/responsiveness/responsive-desktop-intro.png) | ![screenshot](documentation/responsiveness/responsive-desktop-calculator.png) | ![screenshot](documentation/responsiveness/responsive-desktop-result.png) |![screenshot](documentation/responsiveness/responsive-desktop-404.png)| Works as expected |
 
 
 ## Lighthouse Audit
