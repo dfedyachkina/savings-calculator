@@ -99,7 +99,11 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click on Calculate button | Doesn't procced until user will input all correct data | Pass | |
 | | Click on calculate button| Hide calculator and show the result | Pass | |
 | Result| | | | |
-| | Clcik on Reset button | Reload window | Pass | |
+| | Click on Reset button | Reload window | Pass | |
+| Footer| | | | |
+| | Click on social media icons | Open a link of social media | Pass | |
+| 404| | | | |
+| | Click on link "Back to calculator!"| Open home page | Pass | |
 
 ## Bugs
 
