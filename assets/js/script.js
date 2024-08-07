@@ -127,7 +127,7 @@ function checkData() {
         calculateTaxHeading.classList.add("hide");
         resultText.innerText = `You entered food expenses: ${food}. The value cannot be lees than 0. Please eneter another value and try again!`;
         resultText.style.color = "red";
-    } else if (otherExpenses <= 0) {
+    } else if (otherExpenses < 0) {
         resultText.classList.remove("hide");
         calculateTaxHeading.classList.add("hide");
         resultText.innerText = `You entered other expenses: ${otherExpenses}. The value cannot be lees than 0. Please eneter another value and try again!`;
