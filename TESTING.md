@@ -182,19 +182,34 @@ Defensive programming was manually tested with the below user acceptance testing
     ![screenshot](documentation/bugs/bug02.png)
 
     - To fix this, I add keys such as salary, desiredSavings, rentMortgage, bills, food, otherExpenses into the functions.
-
-    function letsCalculate(desiredSavings, salary, rentMortgage, bills, food, otherExpenses) {
+function letsCalculate(desiredSavings, salary, rentMortgage, bills, food, otherExpenses) {
     let typeOfSalary = findCheckedRadioButton();
     if (typeOfSalary === "hourly") {
-        console.log(salary);
+        resultText.innerText = `Your hourly salary ${salary} euro has been converted to yearly salary.`;
         salary = hourlySalary(salary);
     } else if (typeOfSalary === "monthly") {
+        resultText.innerText = `Your monthly salary ${salary} euro has been converted to yearly salary.`;
         salary = monthlySalary(salary);
     } else if (typeOfSalary === null) {
-        alert(`You haven't clicked on the radio button! Please choose your type of salary`);
-        throw `Radio button hasn't been clicked`;
+        resultText.classList.remove("hide");
+        calculateTaxHeading.classList.add("hide");
+    
+        resultText.innerText = "You haven't checked a radio button - please click on RESET and try again";
+        resultText.style.color = "red";
+        document.getElementById("yearly-salary").classList.add("hide");
+        document.getElementById("tax").classList.add("hide");
+        return;
     }
+    document.getElementById("yearly-salary").innerText = `Your yearly salary: ${salary}`;
+    let taxInfo = taxCalculator(salary);
+    document.getElementById("tax").innerText = taxInfo.message;
+    let taxMonthly = taxInfo.taxMonthly;
+    document.getElementById("six-month").innerText = sixMonthSave(desiredSavings, salary, rentMortgage, bills, food, otherExpenses, taxMonthly);
+    document.getElementById("one-year").innerText = oneYearSave(desiredSavings, salary, rentMortgage, bills, food, otherExpenses, taxMonthly);
+    document.getElementById("two-years").innerText = twoYearsSave(desiredSavings, salary, rentMortgage, bills, food, otherExpenses, taxMonthly);
+    document.getElementById("three-years").innerText = threeYearsSave(desiredSavings, salary, rentMortgage, bills, food, otherExpenses, taxMonthly);
 }
+
 
 
 - Function sixMonth, oneYear, twoYears and threeYears don't get a value of the variable taxMonthly
