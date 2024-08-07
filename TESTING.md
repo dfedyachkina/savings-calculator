@@ -244,7 +244,9 @@ Make sure to include any necessary steps you've implemented to fix the bug(s) as
 
     ![screenshot](documentation/bugs/bug03.png)
 
-    - To fix this, I add return message and variable of taxMontly separetly in taxCalculator function.
+    - To fix this, I add return message and variable of taxMontly separetly in taxCalculator function and assign this value to the var taxMonthly in letsCalculate function.
+
+
 
 - JS cannot find the element with ID result.
 
@@ -258,11 +260,30 @@ Make sure to include any necessary steps you've implemented to fix the bug(s) as
 
     - To fix this, I change a logical signs instead of "<=" to "<".
 
-- Reset button overflows the cards
+- The result cards are different sizes
 
     ![screenshot](documentation/bugs/bug06.png)
 
-    - To fix this, I fix styles to the cards and to the button.
+    - To fix this, I add displaY: flex style and flex-direction: column  to the columns class.
+
+- JS doesn't check validation of inputted data
+
+    ![screenshot](documentation/bugs/bug07.png)
+
+    - To fix this, I add code into the DOM contecnt loader.
+
+    form.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        if (this.checkValidity()) {
+            // form is valid
+            checkData();
+        } else {
+            // form is not valid
+            this.reportValidity();
+        }
+    });
 
 ## Unfixed Bugs
 
