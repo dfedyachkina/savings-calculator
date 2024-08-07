@@ -75,6 +75,10 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Feature is expected to do give a calculator form and give the result when the user does inputting data | Tested the feature by doing input data and click on "Calculate!" button | The feature behaved as expected, and it did calculation and give the result | Test concluded and passed | ![screenshot](documentation/features/feature02.png) |
 | Result | | | | | |
 | | Feature is expected to do show the result and allow to the user reload a page when the user does click on "Reset" button  | Tested the feature by doing checking the result and clicking on "Reset" button | The feature behaved as expected, and it did shows correct result and reload page by clicking on "Reset" button | Test concluded and passed | ![screenshot](documentation/features/feature03.png) |
+| Footer| | | | | |
+| | Feature is expected to do open a page with social media of the developer when the user does click on sicoal media icons | Tested the feature by doing click on on icons | The feature behaved as expected, and it did open pages of social medias | Test concluded and passed | ![screenshot](documentation/features/feature05.png) |
+| 404| | | | | |
+| | Feature is expected to do show a message of error and give a link back to the calculator when the user does reaching unexicted page | Tested the feature by doing click on link | The feature behaved as expected, and it did navigated user to the calculator| Test concluded and passed | ![screenshot](documentation/browsers/browser-chrome-404.png) |
 
 
 
