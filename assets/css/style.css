@@ -220,11 +220,9 @@ i {
 /* Media for screens 500px and upper */
 @media screen and (min-width: 500px) {
     .columns {
-      width: 100%;
+        width: 50%;
     }
-
 }
-
 
 /* Media for screens 720px and upper */
 @media screen and (min-width: 720px) {
@@ -250,13 +248,19 @@ i {
         width: 50vh;
         margin: 0px auto;
     }
-    
+}
 
+
+/* Media for screens 900px and upper */
+@media screen and (min-width: 900px) {
+    .columns {
+        width: 25%;
+    }
 }
 
 /* Media for screens 1120px and upper  */
-
 @media screen and (min-width:1120px) {
+
     /* Introduction section */
     #intro {
         margin: 30px 20%;
@@ -265,9 +269,10 @@ i {
 
     #start:hover {
         background-color: #185318;
-    } 
+    }
+
     /* Form section */
-    #calculate{
+    #calculate {
         flex-direction: row;
         margin: 0 10px;
     }
@@ -277,7 +282,6 @@ i {
         color: white;
     }
 
-
     #calculate-form {
         width: 50vw;
     }
@@ -285,8 +289,6 @@ i {
     .calculate-input {
         width: 45vw;
     }
-
-
 }
 
 
