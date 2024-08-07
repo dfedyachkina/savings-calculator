@@ -53,6 +53,13 @@ I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0
     - Calculation Result Display: The result section presents the outcomes of the user's calculations in a clear and concise manner. It provides detailed financial projections based on the input values, including savings estimates for specified time periods. Additionally, this section includes error handling, displaying informative messages if there were any issues or inaccuracies in the input data, ensuring users receive reliable and precise results.
 
 ![screenshot](documentation/features/feature03.png)
+![screenshot](documentation/features/feature04.png)
+
+- **Footer**
+
+    - The footer containts the name of developer and kink to her social media.
+
+![screenshot](documentation/features/feature05.png)
 
 ### Future Features
 
