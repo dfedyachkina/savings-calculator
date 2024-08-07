@@ -78,7 +78,7 @@ section {
 
 /* Calculate Section */
 .calculator {
-    width: 100vw;
+    width: 100%;
 }
 
 #calculate-form {
@@ -136,10 +136,11 @@ section {
 #boxes {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .columns {
-    width: 33.3%;
+    width: 100%;
     padding: 8px;
     display: flex;
     flex-direction: column;
