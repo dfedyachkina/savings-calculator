@@ -61,6 +61,12 @@ I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0
 
 ![screenshot](documentation/features/feature05.png)
 
+- **404**
+
+    - The page containts the message of 404 error and a link to bak to the calculator. 
+
+![screenshot](documentation/features/feature06.png)
+
 ### Future Features
 
 - Period Selection Checkboxes
