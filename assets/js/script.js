@@ -63,10 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
 function letsCalculate(desiredSavings, salary, rentMortgage, bills, food, otherExpenses) {
     let typeOfSalary = findCheckedRadioButton();
     if (typeOfSalary === "hourly") {
-        resultText.innerText = `Your hourly salary ${salary} euro has been converted to yearly salary.`;
+        resultText.classList.remove("hide");
+        resultText.innerText = `Your hourly salary €${salary} has been converted to yearly salary.`;
         salary = hourlySalary(salary);
     } else if (typeOfSalary === "monthly") {
-        resultText.innerText = `Your monthly salary ${salary} euro has been converted to yearly salary.`;
+        resultText.classList.remove("hide");
+        resultText.innerText = `Your monthly salary €${salary} has been converted to yearly salary.`;
         salary = monthlySalary(salary);
     } else if (typeOfSalary === null) {
         resultText.classList.remove("hide");
@@ -78,7 +80,7 @@ function letsCalculate(desiredSavings, salary, rentMortgage, bills, food, otherE
         document.getElementById("tax").classList.add("hide");
         return;
     }
-    document.getElementById("yearly-salary").innerText = `Your yearly salary: ${salary}`;
+    document.getElementById("yearly-salary").innerText = `Your yearly salary: €${salary}`;
     let taxInfo = taxCalculator(salary);
     document.getElementById("tax").innerText = taxInfo.message;
     let taxMonthly = taxInfo.taxMonthly;
@@ -105,32 +107,32 @@ function checkData() {
     if (desiredSavings < 100) {
         resultText.classList.remove("hide");
         calculateTaxHeading.classList.add("hide");
-        resultText.innerText = `You entered desired saving: ${desiredSavings}. The value cannot be lees than 100. Please eneter another value and try again!`;
+        resultText.innerText = `You entered desired saving: €${desiredSavings}. The value cannot be lees than 100. Please eneter another value and try again!`;
         resultText.style.color = "red";
     } else if (salary < 10) {
         resultText.classList.remove("hide");
         calculateTaxHeading.classList.add("hide");
-        resultText.innerText = `You entered salary: ${salary}. The value cannot be lees than 10. Please eneter another value and try again!`;
+        resultText.innerText = `You entered salary: €${salary}. The value cannot be lees than 10. Please eneter another value and try again!`;
         resultText.style.color = "red";
     } else if (rentMortgage < 0) {
         resultText.classList.remove("hide");
         calculateTaxHeading.classList.add("hide");
-        resultText.innerText = `You entered rent/mortgage expenses: ${rentMortgage}. The value cannot be lees than 0. Please eneter another value and try again!`;
+        resultText.innerText = `You entered rent/mortgage expenses: €${rentMortgage}. The value cannot be lees than 0. Please eneter another value and try again!`;
         resultText.style.color = "red";
     } else if (bills < 0) {
         resultText.classList.remove("hide");
         calculateTaxHeading.classList.add("hide");
-        resultText.innerText = `You entered bills expenses: ${bills}. The value cannot be lees than 0. Please eneter another value and try again!`;
+        resultText.innerText = `You entered bills expenses: €${bills}. The value cannot be lees than 0. Please eneter another value and try again!`;
         resultText.style.color = "red";
     } else if (food < 0) {
         resultText.classList.remove("hide");
         calculateTaxHeading.classList.add("hide");
-        resultText.innerText = `You entered food expenses: ${food}. The value cannot be lees than 0. Please eneter another value and try again!`;
+        resultText.innerText = `You entered food expenses: €${food}. The value cannot be lees than 0. Please eneter another value and try again!`;
         resultText.style.color = "red";
     } else if (otherExpenses < 0) {
         resultText.classList.remove("hide");
         calculateTaxHeading.classList.add("hide");
-        resultText.innerText = `You entered other expenses: ${otherExpenses}. The value cannot be lees than 0. Please eneter another value and try again!`;
+        resultText.innerText = `You entered other expenses: €${otherExpenses}. The value cannot be lees than 0. Please eneter another value and try again!`;
         resultText.style.color = "red";
     } else {
         document.getElementById("yearly-salary").classList.remove("hide");
@@ -184,14 +186,14 @@ function taxCalculator(salary) {
         taxYearly = Math.round(salary * 0.2);
         taxMonthly = Math.round(taxYearly / 12);
         return {
-            message: `Your rate of taxes is 20%, because your annual salary is less than 40,000 euro.\n The total tax: ${taxYearly}\n Your tax monthly: ${taxMonthly}`,
+            message: `Your rate of taxes is 20%, because your annual salary is less than €40,000.\n The total tax: €${taxYearly}\n Your tax monthly: ${taxMonthly}`,
             taxMonthly: taxMonthly
         };
     } else {
         taxYearly = Math.round(salary * 0.4);
         taxMonthly = Math.round(taxYearly / 12);
         return {
-            message: `Your rate of taxes is 40%, because your annual salary is equal or more than 40,000 euro.\n The total tax: ${taxYearly}\n Your tax monthly: ${taxMonthly}`,
+            message: `Your rate of taxes is 40%, because your annual salary is equal or more than €40,000.\n The total tax: €${taxYearly}\n Your tax monthly: ${taxMonthly}`,
             taxMonthly: taxMonthly
         };
     }
@@ -207,10 +209,10 @@ function sixMonthSave(desiredSavings, salary, rentMortgage, bills, food, otherEx
     if (eachMonthSavings <= howMuchMoneyLeftMonthly) {
         let moneyLeft = howMuchMoneyLeftMonthly - eachMonthSavings;
         document.getElementById("six-month-header").style.backgroundColor = "#185318";
-        return `\nYou can afford to save ${desiredSavings} euro within 6 month.\nYou need to save monthly: ${eachMonthSavings} euro \n Money left: ${moneyLeft} euro`;
+        return `\nYou can afford to save €${desiredSavings} within 6 month.\nYou need to save monthly: €${eachMonthSavings} \n Money left: €${moneyLeft}`;
     } else {
         document.getElementById("six-month-header").style.backgroundColor = "#B00000";
-        return `\nUnfortunately, it's impossible to save ${desiredSavings} euro within 6 month.\nThere is how much money needs every month: ${eachMonthSavings} euro\n There is how much money left you have every month: ${howMuchMoneyLeftMonthly} euro`;
+        return `\nUnfortunately, it's impossible to save €${desiredSavings} within 6 month.\nThere is how much money needs every month: €${eachMonthSavings}\n There is how much money left you have every month after taxes and all your expenses: €${howMuchMoneyLeftMonthly}`;
     }
 }
 
@@ -224,10 +226,10 @@ function oneYearSave(desiredSavings, salary, rentMortgage, bills, food, otherExp
     if (eachMonthSavings <= howMuchMoneyLeftMonthly) {
         let moneyLeft = howMuchMoneyLeftMonthly - eachMonthSavings;
         document.getElementById("one-year-header").style.backgroundColor = "#185318";
-        return `\nYou can afford to save ${desiredSavings} euro within 1 year.\nYou need to save monthly: ${eachMonthSavings} euro \n Money left: ${moneyLeft} euro`;
+        return `\nYou can afford to save €${desiredSavings} within 1 year.\nYou need to save monthly: €${eachMonthSavings} \n Money left: €${moneyLeft}`;
     } else {
         document.getElementById("one-year-header").style.backgroundColor = "#B00000";
-        return `\nUnfortunately, it's impossible to save ${desiredSavings} euro within 1 year.\nThere is how much money needs every month: ${eachMonthSavings} euro\n There is how much money left you have every month after taxes and all your expenses: ${howMuchMoneyLeftMonthly} euro`;
+        return `\nUnfortunately, it's impossible to save €${desiredSavings} within 1 year.\nThere is how much money needs every month: €${eachMonthSavings}\n There is how much money left you have every month after taxes and all your expenses: €${howMuchMoneyLeftMonthly}`;
     }
 }
 
@@ -241,10 +243,10 @@ function twoYearsSave(desiredSavings, salary, rentMortgage, bills, food, otherEx
     if (eachMonthSavings <= howMuchMoneyLeftMonthly) {
         let moneyLeft = howMuchMoneyLeftMonthly - eachMonthSavings;
         document.getElementById("two-years-header").style.backgroundColor = "#185318";
-        return `\nYou can afford to save ${desiredSavings} euro within 2 years.\nYou need to save monthly: ${eachMonthSavings} euro \n Money left: ${moneyLeft} euro`;
+        return `\nYou can afford to save €${desiredSavings} within 2 years.\nYou need to save monthly: €${eachMonthSavings} \n Money left: €${moneyLeft}`;
     } else {
         document.getElementById("two-years-header").style.backgroundColor = "#B00000";
-        return `\nUnfortunately, it's impossible to save ${desiredSavings} euro within 2 years.\nThere is how much money needs every month: ${eachMonthSavings} euro\n There is how much money left you have every month after taxes and all your expenses: ${howMuchMoneyLeftMonthly} euro`;
+        return `\nUnfortunately, it's impossible to save €${desiredSavings} within 2 years.\nThere is how much money needs every month: €${eachMonthSavings}\n There is how much money left you have every month after taxes and all your expenses: €${howMuchMoneyLeftMonthly}`;
     }
 }
 
@@ -258,9 +260,9 @@ function threeYearsSave(desiredSavings, salary, rentMortgage, bills, food, other
     if (eachMonthSavings <= howMuchMoneyLeftMonthly) {
         let moneyLeft = howMuchMoneyLeftMonthly - eachMonthSavings;
         document.getElementById("three-years-header").style.backgroundColor = "#185318";
-        return `\nYou can afford to save ${desiredSavings} euro within 3 years.\nYou need to save monthly: ${eachMonthSavings} euro \n Money left: ${moneyLeft} euro`;
+        return `\nYou can afford to save €${desiredSavings} within 3 years.\nYou need to save monthly: €${eachMonthSavings} \n Money left: €${moneyLeft}`;
     } else {
         document.getElementById("three-years-header").style.backgroundColor = "#B00000";
-        return `\nUnfortunately, it's impossible to save ${desiredSavings} euro within 3 years.\nThere is how much money needs every month: ${eachMonthSavings} euro\n There is how much money left you have every month after taxes and all your expenses ${howMuchMoneyLeftMonthly} euro`;
+        return `\nUnfortunately, it's impossible to save €${desiredSavings} within 3 years.\nThere is how much money needs every month: €${eachMonthSavings}\n There is how much money left you have every month after taxes and all your expenses: €${howMuchMoneyLeftMonthly}`;
     }
 }
