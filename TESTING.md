@@ -114,66 +114,74 @@ Defensive programming was manually tested with the below user acceptance testing
 
     - To fix this, I change the attribute by which querySelector looking for checked button.
 
-    - Before: 
-    function findCheckedRadioButton() {
-    let selectedRadioButton = document.querySelector('input[name="radio"]:checked');
-    if (selectedRadioButton) {
-        return selectedRadioButton.getAttribute("data-type");
-    } else {
-        return null;
-    }
-}
-    - After:
-    function findCheckedRadioButton() {
-    let selectedRadioButton = document.querySelector('input[type="radio"]:checked');
-    if (selectedRadioButton) {
-        return selectedRadioButton.getAttribute("data-type");
-    } else {
-        return null;
-    }
-    }
+       - Before:
 
+    ```js
+    function findCheckedRadioButton() {
+        let selectedRadioButton = document.querySelector('input[name="radio"]:checked');
+        if (selectedRadioButton) {
+            return selectedRadioButton.getAttribute("data-type");
+        } else {
+            return null;
+        }
+    }
+    ```
+
+    - After:
+
+    ```js
+    function findCheckedRadioButton() {
+        let selectedRadioButton = document.querySelector('input[type="radio"]:checked');
+        if (selectedRadioButton) {
+            return selectedRadioButton.getAttribute("data-type");
+        } else {
+            return null;
+        }
+    }
+    ```
 
 - Functions letsCalculate, hourlySlary, monthlySalary don’t get value of vars
 
     ![screenshot](documentation/bugs/bug02.png)
 
     - To fix this, I add keys such as salary, desiredSavings, rentMortgage, bills, food, otherExpenses into the functions.
-function letsCalculate(desiredSavings, salary, rentMortgage, bills, food, otherExpenses) {
-    let typeOfSalary = findCheckedRadioButton();
-    if (typeOfSalary === "hourly") {
-        resultText.innerText = `Your hourly salary ${salary} euro has been converted to yearly salary.`;
-        salary = hourlySalary(salary);
-    } else if (typeOfSalary === "monthly") {
-        resultText.innerText = `Your monthly salary ${salary} euro has been converted to yearly salary.`;
-        salary = monthlySalary(salary);
-    } else if (typeOfSalary === null) {
-        resultText.classList.remove("hide");
-        calculateTaxHeading.classList.add("hide");
+
+    ```js
+    function letsCalculate(desiredSavings, salary, rentMortgage, bills, food, otherExpenses) {
+        let typeOfSalary = findCheckedRadioButton();
+        if (typeOfSalary === "hourly") {
+            resultText.innerText = `Your hourly salary ${salary} euro has been converted to yearly salary.`;
+            salary = hourlySalary(salary);
+        } else if (typeOfSalary === "monthly") {
+            resultText.innerText = `Your monthly salary ${salary} euro has been converted to yearly salary.`;
+            salary = monthlySalary(salary);
+        } else if (typeOfSalary === null) {
+            resultText.classList.remove("hide");
+            calculateTaxHeading.classList.add("hide");
     
-        resultText.innerText = "You haven't checked a radio button - please click on RESET and try again";
-        resultText.style.color = "red";
-        document.getElementById("yearly-salary").classList.add("hide");
-        document.getElementById("tax").classList.add("hide");
-        return;
+            resultText.innerText = "You haven't checked a radio button - please click on RESET and try again";
+            resultText.style.color = "red";
+            document.getElementById("yearly-salary").classList.add("hide");
+            document.getElementById("tax").classList.add("hide");
+            return;
+        }
+
+        document.getElementById("yearly-salary").innerText = `Your yearly salary: ${salary}`;
+        let taxInfo = taxCalculator(salary);
+        document.getElementById("tax").innerText = taxInfo.message;
+        let taxMonthly = taxInfo.taxMonthly;
+        document.getElementById("six-month").innerText = sixMonthSave(desiredSavings, salary, rentMortgage, bills, food, otherExpenses, taxMonthly);
+        document.getElementById("one-year").innerText = oneYearSave(desiredSavings, salary, rentMortgage, bills, food, otherExpenses, taxMonthly);
+        document.getElementById("two-years").innerText = twoYearsSave(desiredSavings, salary, rentMortgage, bills, food, otherExpenses, taxMonthly);
+        document.getElementById("three-years").innerText = threeYearsSave(desiredSavings, salary, rentMortgage, bills, food, otherExpenses, taxMonthly);
     }
-    document.getElementById("yearly-salary").innerText = `Your yearly salary: ${salary}`;
-    let taxInfo = taxCalculator(salary);
-    document.getElementById("tax").innerText = taxInfo.message;
-    let taxMonthly = taxInfo.taxMonthly;
-    document.getElementById("six-month").innerText = sixMonthSave(desiredSavings, salary, rentMortgage, bills, food, otherExpenses, taxMonthly);
-    document.getElementById("one-year").innerText = oneYearSave(desiredSavings, salary, rentMortgage, bills, food, otherExpenses, taxMonthly);
-    document.getElementById("two-years").innerText = twoYearsSave(desiredSavings, salary, rentMortgage, bills, food, otherExpenses, taxMonthly);
-    document.getElementById("three-years").innerText = threeYearsSave(desiredSavings, salary, rentMortgage, bills, food, otherExpenses, taxMonthly);
-}
+    ```
 
-
-
-- Function sixMonth, oneYear, twoYears and threeYears don't get a value of the variable taxMonthly
+- Functions `sixMonth()`, `oneYear()`, `twoYears()`, and `threeYears()` don't get a value of the variable `taxMonthly`.
 
     ![screenshot](documentation/bugs/bug03.png)
 
-    - To fix this, I add return message and variable of taxMontly separetly in taxCalculator function and assign this value to the var taxMonthly in letsCalculate function.
+    - To fix this, I add `return` message and variable of `taxMontly` separatly in `taxCalculator()` function and assign this value to the var `taxMonthly` in `letsCalculate()` function.
 
 
 
@@ -187,20 +195,21 @@ function letsCalculate(desiredSavings, salary, rentMortgage, bills, food, otherE
 
     ![screenshot](documentation/bugs/bug05.png)
 
-    - To fix this, I change a logical signs instead of "<=" to "<".
+    - To fix this, I change a logical signs instead of `<=` to `<`.
 
 - The result cards are different sizes
 
     ![screenshot](documentation/bugs/bug06.png)
 
-    - To fix this, I add displaY: flex style and flex-direction: column  to the columns class.
+    - To fix this, I add `display: flex;` style and `flex-direction: column;` to the `.columns` class.
 
 - JS doesn't check validation of inputted data
 
     ![screenshot](documentation/bugs/bug07.png)
 
-    - To fix this, I add code into the DOM contecnt loader.
+    - To fix this, I add code into the DOM content loader.
 
+    ```js
     form.addEventListener("submit", function(event) {
 
         event.preventDefault();
@@ -213,6 +222,7 @@ function letsCalculate(desiredSavings, salary, rentMortgage, bills, food, otherE
             this.reportValidity();
         }
     });
+    ```
 
 ## Unfixed Bugs
 
