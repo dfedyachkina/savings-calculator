@@ -14,6 +14,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
 |  | index.html | ![screenshot](documentation/validation/html-validation.png) | |
+|  | 404.html | ![screenshot](documentation/validation/html-validation-404.png) | |
 
 ### CSS
 
