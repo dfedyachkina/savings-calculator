@@ -141,7 +141,9 @@ You can fork this repository by using the following steps:
 | Source | Location | Notes |
 | --- | --- | --- |
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
-| [W3Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_pricing_table) | Result cards | build up cards |
+| [W3Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_pricing_table) | CSS and HTML | build up cards |
+| [Irish Taxes](https://www.revenue.ie/en/jobs-and-pensions/calculating-your-income-tax/how-income-tax-is-calculated.aspx) | JS| calculate taxes|
+
 
 ### Media
 
